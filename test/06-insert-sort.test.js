@@ -1,11 +1,5 @@
-const {
-  Node,
-  buildOneTwo,
-  buildTwoOne,
-  buildOneTwoThree,
-  buildThreeTwoOne,
-  buildNodes,
-} = require('../lib/00-utils')
+const { Node } = require('../lib/00-utils')
+const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
 const { insertSort, insertSortV2 } = require('../lib/06-insert-sort')
 
 describe('06-insert-sort', () => {
@@ -25,21 +19,21 @@ describe('06-insert-sort', () => {
       })
 
       it('should be able to handle a pre-sorted list of length 2.', () => {
-        const list = fn(buildOneTwo())
+        const list = fn(buildNodes([1, 2]))
         expect(list.data).toEqual(1)
         expect(list.next.data).toEqual(2)
         expect(list.next.next).toEqual(null)
       })
 
       it('should be able to handle a reverse sorted list of length 2.', () => {
-        const list = fn(buildTwoOne())
+        const list = fn(buildNodes([2, 1]))
         expect(list.data).toEqual(1)
         expect(list.next.data).toEqual(2)
         expect(list.next.next).toEqual(null)
       })
 
       it('should be able to handle a pre-sorted list of length 3.', () => {
-        const list = fn(buildOneTwoThree())
+        const list = fn(buildNodes([1, 2, 3]))
         expect(list.data).toEqual(1)
         expect(list.next.data).toEqual(2)
         expect(list.next.next.data).toEqual(3)
@@ -47,7 +41,7 @@ describe('06-insert-sort', () => {
       })
 
       it('should be able to handle a reverse sorted list of length 3.', () => {
-        const list = fn(buildThreeTwoOne())
+        const list = fn(buildNodes([3, 2, 1]))
         expect(list.data).toEqual(1)
         expect(list.next.data).toEqual(2)
         expect(list.next.next.data).toEqual(3)

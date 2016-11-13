@@ -1,4 +1,4 @@
-const { buildOneTwoThree } = require('../lib/00-utils')
+const { buildOneTwoThree } = require('../lib/01-push-and-build-one-two-three')
 const { sortedInsert, sortedInsertV2 } = require('../lib/05-sorted-insert')
 
 describe('05-sorted-insert', () => {
