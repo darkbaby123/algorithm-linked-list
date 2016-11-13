@@ -2,12 +2,12 @@
 
 This is a Codewars series. Linked list is a data structure to practise recursion, and this series contains many basic operations of linked lists.
 
-- [ ] Push & BuildOneTwoThree
+- [x] Push & BuildOneTwoThree
 - [ ] Length & Count
 - [ ] Get Nth Node
 - [ ] Insert Nth Node
 - [x] Sorted Insert
-- [ ] Insert Sort
+- [x] Insert Sort
 - [ ] Append
 - [ ] Remove Duplicates
 - [ ] Move Node
