@@ -2,6 +2,9 @@ const { Node } = require('../lib/00-utils')
 const {
   push,
   buildOneTwoThree,
+  buildNodes,
+  buildNodesV2,
+  buildNodesV3,
 } = require('../lib/01-push-and-build-one-two-three')
 
 describe('01-push-and-build-one-two-three', () => {
@@ -29,4 +32,26 @@ describe('01-push-and-build-one-two-three', () => {
       expect(list.next.next.next).toEqual(null)
     })
   })
+
+  createBuildNodesTests(buildNodes)
+  createBuildNodesTests(buildNodesV2)
+  createBuildNodesTests(buildNodesV3)
+
+  function createBuildNodesTests(fn) {
+    describe(fn.name, () => {
+      it('should return null for empty data', () => {
+        expect(buildNodes()).toEqual(null)
+        expect(buildNodes(null)).toEqual(null)
+        expect(buildNodes([])).toEqual(null)
+      })
+
+      it('should build a linked list', () => {
+        const list = buildNodes([1, 2, 3])
+        expect(list.data).toEqual(1)
+        expect(list.next.data).toEqual(2)
+        expect(list.next.next.data).toEqual(3)
+        expect(list.next.next.next).toEqual(null)
+      })
+    })
+  }
 })
