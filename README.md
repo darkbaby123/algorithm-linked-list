@@ -8,7 +8,7 @@ This is a Codewars series. Linked list is a data structure to practise recursion
 - [ ] Insert Nth Node
 - [x] Sorted Insert
 - [x] Insert Sort
-- [ ] Append
+- [x] Append
 - [ ] Remove Duplicates
 - [ ] Move Node
 - [ ] Move Node In-place
