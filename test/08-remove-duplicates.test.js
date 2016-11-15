@@ -1,5 +1,3 @@
-'use strict'
-
 const { Node } = require('../lib/00-utils')
 const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
 const {

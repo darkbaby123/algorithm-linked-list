@@ -2,6 +2,8 @@
 
 This is a Codewars series. Linked list is a data structure to practise recursion, and this series contains many basic operations of linked lists.
 
+Note: some katas need TCO(tail call optimization) to test large linked lists. TCO is only enabled on Node.js 6.6.0+ with strict mode and `--harmony` flag. I setup them in the `mocha.opts`.
+
 - [x] Push & BuildOneTwoThree
 - [ ] Length & Count
 - [ ] Get Nth Node
@@ -9,7 +11,7 @@ This is a Codewars series. Linked list is a data structure to practise recursion
 - [x] Sorted Insert
 - [x] Insert Sort
 - [x] Append
-- [ ] Remove Duplicates
+- [x] Remove Duplicates
 - [ ] Move Node
 - [ ] Move Node In-place
 - [ ] Alternating Split
