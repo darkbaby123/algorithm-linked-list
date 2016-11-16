@@ -12,7 +12,7 @@ Note: some katas need TCO(tail call optimization) to test large linked lists. TC
 - [x] Insert Sort
 - [x] Append
 - [x] Remove Duplicates
-- [ ] Move Node
+- [x] Move Node
 - [ ] Move Node In-place
 - [ ] Alternating Split
 - [ ] Front back split
