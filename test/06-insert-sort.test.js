@@ -2,7 +2,7 @@ const { Node } = require('../lib/00-utils')
 const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
 const { insertSort, insertSortV2 } = require('../lib/06-insert-sort')
 
-describe('06-insert-sort', () => {
+describe('06 Insert Sort', () => {
   createTests(insertSort)
   createTests(insertSortV2)
 

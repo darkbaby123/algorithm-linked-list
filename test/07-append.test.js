@@ -1,7 +1,7 @@
 const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
 const { append, appendV2 } = require('../lib/07-append')
 
-describe('07-append', () => {
+describe('07 Append', () => {
   createTests(append)
   createTests(appendV2)
 

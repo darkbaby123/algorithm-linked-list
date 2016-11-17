@@ -7,7 +7,7 @@ const {
   buildNodesV3,
 } = require('../lib/01-push-and-build-one-two-three')
 
-describe('01-push-and-build-one-two-three', () => {
+describe('01 Push & BuildOneTwoThree', () => {
   describe('push', () => {
     it('should be able to create a new linked list.', () => {
       const list = push(null, 1)
