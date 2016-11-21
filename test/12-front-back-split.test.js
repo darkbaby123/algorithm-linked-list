@@ -1,9 +1,13 @@
 const { Node } = require('../lib/00-utils')
 const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
-const { frontBackSplit } = require('../lib/12-front-back-split')
+const {
+  frontBackSplit,
+  frontBackSplitV2,
+} = require('../lib/12-front-back-split')
 
 describe('12 Front Back Split', () => {
   createTests(frontBackSplit)
+  createTests(frontBackSplitV2)
 
   function createTests(fn) {
     describe(fn.name, () => {
