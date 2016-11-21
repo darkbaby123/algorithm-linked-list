@@ -3,11 +3,13 @@ const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
 const {
   frontBackSplit,
   frontBackSplitV2,
+  frontBackSplitV3,
 } = require('../lib/12-front-back-split')
 
 describe('12 Front Back Split', () => {
   createTests(frontBackSplit)
   createTests(frontBackSplitV2)
+  createTests(frontBackSplitV3)
 
   function createTests(fn) {
     describe(fn.name, () => {
