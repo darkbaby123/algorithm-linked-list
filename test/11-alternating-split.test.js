@@ -1,9 +1,10 @@
 const { Node } = require('../lib/00-utils')
 const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
-const { alternatingSplit } = require('../lib/11-alternating-split')
+const { alternatingSplit, alternatingSplitV2 } = require('../lib/11-alternating-split')
 
 describe('11 Alternating Split', () => {
   createTests(alternatingSplit)
+  createTests(alternatingSplitV2)
 
   function createTests(fn) {
     describe(fn.name, () => {
