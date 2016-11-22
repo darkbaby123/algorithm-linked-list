@@ -3,11 +3,13 @@ const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
 const {
   shuffleMerge,
   shuffleMergeV2,
+  shuffleMergeV3,
 } = require('../lib/13-shuffle-merge')
 
 describe('13 Shuffle Merge', () => {
   createTests(shuffleMerge)
   createTests(shuffleMergeV2)
+  createTests(shuffleMergeV3)
 
   function createTests(fn) {
     describe(fn.name, () => {
