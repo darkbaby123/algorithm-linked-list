@@ -46,7 +46,7 @@ describe('01 Push & BuildOneTwoThree', () => {
       })
 
       it('should build a linked list', () => {
-        const list = buildList([1, 2, 3])
+        const list = fn([1, 2, 3])
         expect(list.data).toEqual(1)
         expect(list.next.data).toEqual(2)
         expect(list.next.next.data).toEqual(3)
