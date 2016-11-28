@@ -1,5 +1,5 @@
 const { Node } = require('../lib/00-utils')
-const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
+const { buildList } = require('../lib/01-push-and-build-one-two-three')
 const {
   removeDuplicates,
   removeDuplicatesV2,
@@ -22,19 +22,19 @@ describe('08 Remove Duplicates', () => {
       })
 
       it('should be able to handle a list of length 1.', () => {
-        expect(fn(buildNodes([23])).data).toEqual(23)
+        expect(fn(buildList([23])).data).toEqual(23)
       })
 
       it('should be able to handle a list without duplicates.', () => {
-        expect(fn(buildNodes([1, 2, 3]))).toEqualLinkedList(buildNodes([1, 2, 3]))
-        expect(fn(buildNodes([4, 5, 6]))).toEqualLinkedList(buildNodes([4, 5, 6]))
+        expect(fn(buildList([1, 2, 3]))).toEqualLinkedList(buildList([1, 2, 3]))
+        expect(fn(buildList([4, 5, 6]))).toEqualLinkedList(buildList([4, 5, 6]))
       })
 
       it('should be able to handle a list with duplicates.', () => {
-        expect(fn(buildNodes([1, 2, 2]))).toEqualLinkedList(buildNodes([1, 2]))
-        expect(fn(buildNodes([1, 1, 1, 1, 1]))).toEqualLinkedList(buildNodes([1]))
-        expect(fn(buildNodes([1, 2, 3, 3, 4, 4, 5]))).toEqualLinkedList(buildNodes([1, 2, 3, 4, 5]))
-        expect(fn(buildNodes([1, 1, 1, 2, 2, 2]))).toEqualLinkedList(buildNodes([1, 2]))
+        expect(fn(buildList([1, 2, 2]))).toEqualLinkedList(buildList([1, 2]))
+        expect(fn(buildList([1, 1, 1, 1, 1]))).toEqualLinkedList(buildList([1]))
+        expect(fn(buildList([1, 2, 3, 3, 4, 4, 5]))).toEqualLinkedList(buildList([1, 2, 3, 4, 5]))
+        expect(fn(buildList([1, 1, 1, 2, 2, 2]))).toEqualLinkedList(buildList([1, 2]))
       })
     })
   }

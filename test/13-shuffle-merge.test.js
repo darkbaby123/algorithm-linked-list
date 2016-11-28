@@ -1,5 +1,5 @@
 const { Node } = require('../lib/00-utils')
-const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
+const { buildList } = require('../lib/01-push-and-build-one-two-three')
 const {
   shuffleMerge,
   shuffleMergeV2,
@@ -23,29 +23,29 @@ describe('13 Shuffle Merge', () => {
       })
 
       it('should be able to handle two lists of length 1.', () => {
-        expect(fn(new Node(23), new Node(44))).toEqualLinkedList(buildNodes([23, 44]))
+        expect(fn(new Node(23), new Node(44))).toEqualLinkedList(buildList([23, 44]))
       })
 
       it('should be able to handle lists of length 2.', () => {
-        expect(fn(buildNodes([1, 3]), buildNodes([2, 4])))
-          .toEqualLinkedList(buildNodes([1, 2, 3, 4]))
+        expect(fn(buildList([1, 3]), buildList([2, 4])))
+          .toEqualLinkedList(buildList([1, 2, 3, 4]))
 
-        expect(fn(buildNodes([3]), buildNodes([2, 4])))
-          .toEqualLinkedList(buildNodes([3, 2, 4]))
+        expect(fn(buildList([3]), buildList([2, 4])))
+          .toEqualLinkedList(buildList([3, 2, 4]))
 
-        expect(fn(buildNodes([4, 5]), buildNodes([1])))
-          .toEqualLinkedList(buildNodes([4, 1, 5]))
+        expect(fn(buildList([4, 5]), buildList([1])))
+          .toEqualLinkedList(buildList([4, 1, 5]))
       })
 
       it('should be able to handle a list of length 3.', () => {
-        expect(fn(buildNodes([3, 4, 5]), buildNodes([9, 2])))
-          .toEqualLinkedList(buildNodes([3, 9, 4, 2, 5]))
+        expect(fn(buildList([3, 4, 5]), buildList([9, 2])))
+          .toEqualLinkedList(buildList([3, 9, 4, 2, 5]))
 
-        expect(fn(buildNodes([1, 3, 8]), null))
-          .toEqualLinkedList(buildNodes([1, 3, 8]))
+        expect(fn(buildList([1, 3, 8]), null))
+          .toEqualLinkedList(buildList([1, 3, 8]))
 
-        expect(fn(buildNodes([1, 3, 8]), buildNodes([2, 4, 9])))
-          .toEqualLinkedList(buildNodes([1, 2, 3, 4, 8, 9]))
+        expect(fn(buildList([1, 3, 8]), buildList([2, 4, 9])))
+          .toEqualLinkedList(buildList([1, 2, 3, 4, 8, 9]))
       })
     })
   }

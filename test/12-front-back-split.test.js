@@ -1,5 +1,5 @@
 const { Node } = require('../lib/00-utils')
-const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
+const { buildList } = require('../lib/01-push-and-build-one-two-three')
 const {
   frontBackSplit,
   frontBackSplitV2,
@@ -31,25 +31,25 @@ describe('12 Front Back Split', () => {
       it('should be able to handle a list of length 3.', () => {
         const front = new Node()
         const back = new Node()
-        fn(buildNodes([1, 2, 3]), front, back)
-        expect(front).toEqualLinkedList(buildNodes([1, 2]))
+        fn(buildList([1, 2, 3]), front, back)
+        expect(front).toEqualLinkedList(buildList([1, 2]))
         expect(back).toEqualLinkedList(new Node(3))
       })
 
       it('should be able to handle a list of length 6.', () => {
         const front = new Node()
         const back = new Node()
-        fn(buildNodes([1, 2, 3, 4, 5, 6]), front, back)
-        expect(front).toEqualLinkedList(buildNodes([1, 2, 3]))
-        expect(back).toEqualLinkedList(buildNodes([4, 5, 6]))
+        fn(buildList([1, 2, 3, 4, 5, 6]), front, back)
+        expect(front).toEqualLinkedList(buildList([1, 2, 3]))
+        expect(back).toEqualLinkedList(buildList([4, 5, 6]))
       })
 
       it('should be able to handle a list of length 11.', () => {
         const front = new Node()
         const back = new Node()
-        fn(buildNodes([3, 4, 6, 1, 2, 4, 2, 0, 3, 2, 6]), front, back)
-        expect(front).toEqualLinkedList(buildNodes([3, 4, 6, 1, 2, 4]))
-        expect(back).toEqualLinkedList(buildNodes([2, 0, 3, 2, 6]))
+        fn(buildList([3, 4, 6, 1, 2, 4, 2, 0, 3, 2, 6]), front, back)
+        expect(front).toEqualLinkedList(buildList([3, 4, 6, 1, 2, 4]))
+        expect(back).toEqualLinkedList(buildList([2, 0, 3, 2, 6]))
       })
     })
   }

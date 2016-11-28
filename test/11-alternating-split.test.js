@@ -1,5 +1,5 @@
 const { Node } = require('../lib/00-utils')
-const { buildNodes } = require('../lib/01-push-and-build-one-two-three')
+const { buildList } = require('../lib/01-push-and-build-one-two-three')
 const {
   alternatingSplit,
   alternatingSplitV2,
@@ -22,15 +22,15 @@ describe('11 Alternating Split', () => {
       })
 
       it('should be able to handle a list of length 2.', () => {
-        const ctx = fn(buildNodes([1, 2]))
-        expect(ctx.first).toEqualLinkedList(buildNodes([1]))
-        expect(ctx.second).toEqualLinkedList(buildNodes([2]))
+        const ctx = fn(buildList([1, 2]))
+        expect(ctx.first).toEqualLinkedList(buildList([1]))
+        expect(ctx.second).toEqualLinkedList(buildList([2]))
       })
 
       it('should be able to handle a list of length 6.', () => {
-        const ctx = fn(buildNodes([1, 2, 3, 4, 5, 6]))
-        expect(ctx.first).toEqualLinkedList(buildNodes([1, 3, 5]))
-        expect(ctx.second).toEqualLinkedList(buildNodes([2, 4, 6]))
+        const ctx = fn(buildList([1, 2, 3, 4, 5, 6]))
+        expect(ctx.first).toEqualLinkedList(buildList([1, 3, 5]))
+        expect(ctx.second).toEqualLinkedList(buildList([2, 4, 6]))
       })
     })
   }
