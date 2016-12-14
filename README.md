@@ -7,7 +7,7 @@ Note: some katas need TCO(tail call optimization) to test large linked lists. TC
 - [x] Push & BuildOneTwoThree
 - [x] Length & Count
 - [x] Get Nth Node
-- [ ] Insert Nth Node
+- [x] Insert Nth Node
 - [x] Sorted Insert
 - [x] Insert Sort
 - [x] Append
