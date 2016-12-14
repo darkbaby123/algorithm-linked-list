@@ -1,9 +1,10 @@
 const { buildList } = require('../lib/01-push-and-build-one-two-three')
-const { insertNth, insertNthV2 } = require('../lib/04-insert-nth-node')
+const { insertNth, insertNthV2, insertNthV3 } = require('../lib/04-insert-nth-node')
 
 describe('04 Insert Nth Node', () => {
   createInsertNthNodeTests(insertNth)
   createInsertNthNodeTests(insertNthV2)
+  createInsertNthNodeTests(insertNthV3)
 
   function createInsertNthNodeTests(fn) {
     describe(fn.name, () => {
