@@ -1,9 +1,16 @@
 const { buildOneTwoThree } = require('../lib/01-push-and-build-one-two-three')
-const { sortedInsert, sortedInsertV2 } = require('../lib/05-sorted-insert')
+const {
+  sortedInsert,
+  sortedInsertV2,
+  sortedInsertV3,
+  sortedInsertV4,
+} = require('../lib/05-sorted-insert')
 
 describe('05 Sorted Insert', () => {
   createTests(sortedInsert)
   createTests(sortedInsertV2)
+  createTests(sortedInsertV3)
+  createTests(sortedInsertV4)
 
   function createTests(fn) {
     describe(fn.name, () => {
