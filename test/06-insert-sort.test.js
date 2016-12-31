@@ -20,47 +20,27 @@ describe('06 Insert Sort', () => {
 
       it('should be able to handle a pre-sorted list of length 2.', () => {
         const list = fn(buildList([1, 2]))
-        expect(list.data).toEqual(1)
-        expect(list.next.data).toEqual(2)
-        expect(list.next.next).toEqual(null)
+        expect(list).toEqualLinkedList(buildList([1, 2]))
       })
 
       it('should be able to handle a reverse sorted list of length 2.', () => {
         const list = fn(buildList([2, 1]))
-        expect(list.data).toEqual(1)
-        expect(list.next.data).toEqual(2)
-        expect(list.next.next).toEqual(null)
+        expect(list).toEqualLinkedList(buildList([1, 2]))
       })
 
       it('should be able to handle a pre-sorted list of length 3.', () => {
         const list = fn(buildList([1, 2, 3]))
-        expect(list.data).toEqual(1)
-        expect(list.next.data).toEqual(2)
-        expect(list.next.next.data).toEqual(3)
-        expect(list.next.next.next).toEqual(null)
+        expect(list).toEqualLinkedList(buildList([1, 2, 3]))
       })
 
       it('should be able to handle a reverse sorted list of length 3.', () => {
         const list = fn(buildList([3, 2, 1]))
-        expect(list.data).toEqual(1)
-        expect(list.next.data).toEqual(2)
-        expect(list.next.next.data).toEqual(3)
-        expect(list.next.next.next).toEqual(null)
+        expect(list).toEqualLinkedList(buildList([1, 2, 3]))
       })
 
       it('should be able to handle an unordered list of length > 3.', () => {
         const list = fn(buildList([4, 8, 1, 3, 2, 9, 6, 5, 9, 2]))
-        expect(list.data).toEqual(1)
-        expect(list.next.data).toEqual(2)
-        expect(list.next.next.data).toEqual(2)
-        expect(list.next.next.next.data).toEqual(3)
-        expect(list.next.next.next.next.data).toEqual(4)
-        expect(list.next.next.next.next.next.data).toEqual(5)
-        expect(list.next.next.next.next.next.next.data).toEqual(6)
-        expect(list.next.next.next.next.next.next.next.data).toEqual(8)
-        expect(list.next.next.next.next.next.next.next.next.data).toEqual(9)
-        expect(list.next.next.next.next.next.next.next.next.next.data).toEqual(9)
-        expect(list.next.next.next.next.next.next.next.next.next.next).toEqual(null)
+        expect(list).toEqualLinkedList(buildList([1, 2, 2, 3, 4, 5, 6, 8, 9, 9]))
       })
     })
   }
