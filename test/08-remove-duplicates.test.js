@@ -11,7 +11,7 @@ describe('08 Remove Duplicates', () => {
   createTests(removeDuplicatesV2)
   createTests(removeDuplicatesV3)
 
-  createLargeListTests(removeDuplicates, { isOverflow: false })
+  createLargeListTests(removeDuplicates, { isOverflow: true })
   createLargeListTests(removeDuplicatesV2, { isOverflow: false })
   createLargeListTests(removeDuplicatesV3, { isOverflow: false })
 
@@ -45,7 +45,7 @@ describe('08 Remove Duplicates', () => {
         Error.stackTraceLimit = 10
 
         expect(() => {
-          fn(buildRandomSortedList(20000))
+          fn(buildRandomSortedList(40000))
         })[isOverflow ? 'toThrow' : 'toNotThrow'](RangeError, 'Maximum call stack size exceeded')
       })
     })
