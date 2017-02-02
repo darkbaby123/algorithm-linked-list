@@ -4,12 +4,14 @@ const {
   alternatingSplit,
   alternatingSplitV2,
   alternatingSplitV3,
+  alternatingSplitV4,
 } = require('../lib/11-alternating-split')
 
 describe('11 Alternating Split', () => {
   createTests(alternatingSplit)
   createTests(alternatingSplitV2)
   createTests(alternatingSplitV3)
+  createTests(alternatingSplitV4)
 
   function createTests(fn) {
     describe(fn.name, () => {
