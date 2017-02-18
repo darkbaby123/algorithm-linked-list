@@ -17,8 +17,8 @@ Note: some katas need TCO(tail call optimization) to test large linked lists. TC
 - [x] Alternating Split
 - [x] Front back split
 - [x] Shuffle Merge
-- [ ] Sorted Merge
-- [ ] Merge sort
+- [x] Sorted Merge
+- [x] Merge sort
 - [ ] Sorted Intersect
 - [ ] Iterative Reverse
 - [ ] Recursive Reverse
